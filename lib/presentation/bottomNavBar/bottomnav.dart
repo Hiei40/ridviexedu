@@ -39,28 +39,40 @@ class _BottomNavState extends State<BottomNav> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 GestureDetector(
-                  child: const Icon(Icons.event),
+                  child: Icon(
+                    Icons.event,
+                    color: cubit.selectedIndex == 0 ? Colors.blue : Colors.cyanAccent,
+                  ),
                   onTap: () {
                     cubit.changeitem(0);
                     controller.jumpToPage(0);
                   },
                 ),
                 GestureDetector(
-                  child: const Icon(Icons.search),
+                  child: Icon(
+                    Icons.search,
+                    color: cubit.selectedIndex == 1 ? Colors.blue : Colors.cyanAccent,
+                  ),
                   onTap: () {
                     cubit.changeitem(1);
                     controller.jumpToPage(1);
                   },
                 ),
                 GestureDetector(
-                  child: const Icon(Icons.other_houses),
+                  child: Icon(
+                    Icons.other_houses,
+                    color: cubit.selectedIndex == 2 ? Colors.blue : Colors.cyanAccent,
+                  ),
                   onTap: () {
                     cubit.changeitem(2);
                     controller.jumpToPage(2);
                   },
                 ),
                 GestureDetector(
-                  child: const Icon(Icons.pages),
+                  child: Icon(
+                    Icons.pages,
+                    color: cubit.selectedIndex == 3 ? Colors.blue : Colors.cyanAccent,
+                  ),
                   onTap: () {
                     cubit.changeitem(3);
                     controller.jumpToPage(3);
